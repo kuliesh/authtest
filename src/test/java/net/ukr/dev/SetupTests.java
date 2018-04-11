@@ -28,14 +28,13 @@ public class SetupTests  {
     @Test
     public void openPage() {
         driver.get("http://accounts.dev.ukr.net/registration");
-        //
         assertTrue("Page open successes", $(".header__title").getText().equals("Регистрация почтового ящика"));
     }
 
     @AfterClass
     public static void tearDown(){
-        driver.quit();
         driver.close();
+        driver.quit();
     }
 
 }
