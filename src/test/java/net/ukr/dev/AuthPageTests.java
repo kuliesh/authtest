@@ -5,9 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.refresh;
+import static com.codeborne.selenide.Selenide.*;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class AuthPageTests extends BaseTests {
@@ -22,7 +20,6 @@ public class AuthPageTests extends BaseTests {
 
     @Test
     public void test001_checkTitle() throws InterruptedException {
-        Thread.sleep(2000);
         assertEquals("Реєстрація поштової скриньки", $(".header__title").getText());
         logger.info("Текст заголовка відповідає вказанному значенню ...");
     }
