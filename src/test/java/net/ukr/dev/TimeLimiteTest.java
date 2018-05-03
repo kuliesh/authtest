@@ -7,11 +7,10 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.refresh;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class TimeLimiteTest extends BaseTests{
-    final static Logger logger = Logger.getLogger(AuthPageTests.class);
+    final static Logger logger = Logger.getLogger(TimeLimiteTest.class);
 
     @BeforeClass
     public void openPage() throws InterruptedException {
