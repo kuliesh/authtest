@@ -24,9 +24,9 @@ public class TimeLimiteTest extends BaseTests{
     public void test001_timeLimitForName89() throws InterruptedException {
         $(By.cssSelector("#id-login")).clear();
         $(By.cssSelector("#id-login")).sendKeys("test2.1_0105_003");
-        Thread.sleep(7198000);
+        Thread.sleep(5396000);
         assertEquals("test2.1_0105_003", $("#id-login").getText());
-        Thread.sleep(7202000);
+        Thread.sleep(5404000);
         assertEquals("", $("#id-login").getText());
     }
 }
