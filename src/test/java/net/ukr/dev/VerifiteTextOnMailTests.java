@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -29,7 +30,7 @@ public class VerifiteTextOnMailTests extends BaseTests {
     Thread.sleep(2000);
 
     open("http://newfront.dev.ukr.net/desktop#security/personalData");
-    $(By.cssSelector(".personal-data__edit.ui-button-inline")).click();
+    $(byClassName("personal-data__edit ui-button-inline")).click();
     Thread.sleep(2000);
 
         $(By.cssSelector(".input-default__input.is-size-normal")).sendKeys(",fhvfktq!!");
