@@ -9,6 +9,7 @@ public class BaseTests {
 
     @BeforeTest
     public static void setup() {
+        logger.info("Run browser...");
         System.setProperty("selenide.browser", "chrome");
         System.setProperty("webdriver.chrome.driver", "D:/AutomationTest/authtest/chromedriver.exe");
     }
