@@ -73,8 +73,8 @@ public class VerifiteTextOnMailTests extends BaseTests {
     public void test002_VerifiedTextForChangePersonalDateRu() throws InterruptedException {
         open("http://newfront.dev.ukr.net/desktop#settings/interface");
         //
-        $(By.xpath("html/body/div[1]/div[2]/div/div/div/section[2]/div[2]/div[2]/div/div/table/tbody/tr[2]/td[2]/label")).click();
-        $(By.xpath("html/body/div[1]/div[2]/div/div/div/section[2]/div[2]/div[2]/div/div/table/tbody/tr[2]/td[2]/div/div/a[2]")).click();
+        $(By.xpath("//label/*[text()='Українська']")).click();
+        $(By.xpath("//a[text()='Русский']")).click();
         $(By.cssSelector(".accept")).click();
         assertEquals("Настройки сохранены", $(".info.show").getText());
         Thread.sleep(2000);
@@ -118,8 +118,8 @@ public class VerifiteTextOnMailTests extends BaseTests {
     public void test003_VerifiedTextForChangePersonalDateEn() throws InterruptedException {
         open("http://newfront.dev.ukr.net/desktop#settings/interface");
         //
-        $(By.xpath("html/body/div[1]/div[2]/div/div/div/section[2]/div[2]/div[2]/div/div/table/tbody/tr[2]/td[2]/label")).click();
-        $(By.xpath("html/body/div[1]/div[2]/div/div/div/section[2]/div[2]/div[2]/div/div/table/tbody/tr[2]/td[2]/div/div/a[3]")).click();
+        $(By.xpath("//label/*[text()='Русский']")).click();
+        $(By.xpath("//a[text()='English']")).click();
         $(By.cssSelector(".accept")).click();
         assertEquals("Settings saved", $(".info.show").getText());
         Thread.sleep(2000);
@@ -162,8 +162,8 @@ public class VerifiteTextOnMailTests extends BaseTests {
         //Переключення на український інтерфейс
         open("http://newfront.dev.ukr.net/desktop#settings/interface");
         //
-        $(By.xpath("html/body/div[1]/div[2]/div/div/div/section[2]/div[2]/div[2]/div/div/table/tbody/tr[2]/td[2]/label")).click();
-        $(By.xpath("html/body/div[1]/div[2]/div/div/div/section[2]/div[2]/div[2]/div/div/table/tbody/tr[2]/td[2]/div/div/a[1]")).click();
+        $(By.xpath("//label/*[text()='English']")).click();
+        $(By.xpath("//a[text()='Українська']")).click();
         $(By.cssSelector(".accept")).click();
     }
 }
