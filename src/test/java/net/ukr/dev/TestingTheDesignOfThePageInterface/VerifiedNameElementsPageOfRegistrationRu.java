@@ -15,9 +15,9 @@ import static org.testng.AssertJUnit.assertEquals;
 /**
  * **********************************************************************
  * @Project Name : AuthTestAutomation  - Selenium Framework.
- * @TestSet Name : VerifiedNameElementsPageOfRegistrationUkr
- * @Description : Verified Name Elements on Page Of Registration for Ukr localization
- * @TestHeader : VerifiedNameElementsPageOfRegistrationUkr
+ * @TestSet Name : VerifiedNameElementsPageOfRegistrationRu
+ * @Description : Verified Name Elements on Page Of Registration for Ru localization
+ * @TestHeader : VerifiedNameElementsPageOfRegistrationRu
  * @Date : 10-May-2018
  * @Author :  Sergii Kuliesh
  * **********************************************************************
@@ -30,7 +30,7 @@ public class VerifiedNameElementsPageOfRegistrationRu extends BaseTests {
     @BeforeClass
     public void openPage() throws InterruptedException {
         logger.info("Open page of registration");
-        open("https://mail.ukr.net/desktop/login"); //відкриваємо сторінку входу до поштової скриньки
+        open("http://newfront.dev.ukr.net/desktop/login"); //відкриваємо сторінку входу до поштової скриньки
         $(By.linkText("Створити скриньку")).click(); //переходимо на сторінку реєстрації поштової скриньки
         Thread.sleep(2000);
         //Перевірка, що локалізація вибрана як "Русский"
