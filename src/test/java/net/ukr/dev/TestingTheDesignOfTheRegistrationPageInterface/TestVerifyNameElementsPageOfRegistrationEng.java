@@ -130,6 +130,9 @@ public class TestVerifyNameElementsPageOfRegistrationEng extends BaseTests {
         //текст в полі "Придумайте імя поштової скриньки"
         assertEquals("@dev.ukr.net", $(".form__login-suffix").getText());
         logger.info("Строка '@dev.ukr.net' відображається");
+        //Код телефону відображається
+        assertEquals("+380", $(".input-tel__prefix.is-input-size-normal").getText());
+        logger.info("+380 '+380' відображається");
         //Імя та призвище
 //        assertEquals("Ім'я", $(By.xpath("//input[@placeholder='']")).getText());
 //        logger.info("Строка 'Ім'я' відображається");

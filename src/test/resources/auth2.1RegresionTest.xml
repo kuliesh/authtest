@@ -8,6 +8,7 @@
     <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationUkr"/>
     <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationRu"/>
     <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationEng"/>
+    <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestDisplayElements"/>
     <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginUkr"/>
 </classes>
 </test>
