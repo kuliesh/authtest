@@ -1,4 +1,4 @@
-package net.ukr.dev;
+package net.ukr.dev.BasesClassesForTests;
 
 import org.apache.log4j.Logger;
 import org.testng.annotations.AfterTest;

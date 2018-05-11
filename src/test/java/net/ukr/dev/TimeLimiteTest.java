@@ -1,5 +1,6 @@
 package net.ukr.dev;
 
+import net.ukr.dev.BasesClassesForTests.BaseTests;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
@@ -9,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class TimeLimiteTest extends BaseTests{
+public class TimeLimiteTest extends BaseTests {
     final static Logger logger = Logger.getLogger(TimeLimiteTest.class);
 
     @BeforeClass

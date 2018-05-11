@@ -1,7 +1,7 @@
 package net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface;
 
 import com.codeborne.selenide.Selectors;
-import net.ukr.dev.BaseTests;
+import net.ukr.dev.BasesClassesForTests.BaseTests;
 import net.ukr.dev.TimeLimiteTest;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -35,12 +35,12 @@ public class VerifyNameElementsPageOfRegistrationRu extends BaseTests {
         Thread.sleep(2000);
         //Перевірка, що локалізація вибрана як "Русский"
         $(new Selectors.ByText("Русский")).click();
-        assertEquals("Русский",$("button[class='header__lang-item is-current'] > span[class='header__lang-long-name']").getText());
+        assertEquals("Русский", $("button[class='header__lang-item is-current'] > span[class='header__lang-long-name']").getText());
         logger.info("Вибрана росийська мова.");
     }
 
     @Test
-    public void test001_VerifyTextWithoutElements(){
+    public void test001_VerifyTextWithoutElements() {
 
         //Первіряємо чи відображаються всі мови для вибору
         assertEquals("Українська", $(By.xpath("//button[1]")).getText());
@@ -73,7 +73,7 @@ public class VerifyNameElementsPageOfRegistrationRu extends BaseTests {
     }
 
     @Test
-    public void test002_VerifyTextsForElements(){
+    public void test002_VerifyTextsForElements() {
         //Перевіряємо тексти для полей вводу
         //Поле логіну
         assertEquals("Придумайте имя почтового ящика", $(By.xpath("//section[1]/label")).getText());
@@ -125,4 +125,16 @@ public class VerifyNameElementsPageOfRegistrationRu extends BaseTests {
         assertEquals("Зарегистрировать ящик", $(".submit").getText());
         logger.info("Строка 'Зарегистрировать ящик' відображається");
     }
+    @Test //Перевірка тексту в полях для заповнення
+    public void test003_VerifySuffikxForElements(){
+
+        //текст в полі "Придумайте імя поштової скриньки"
+        assertEquals("@dev.ukr.net", $(".form__login-suffix").getText());
+        logger.info("Строка '@dev.ukr.net' відображається");
+        //Імя та призвище
+//        assertEquals("Ім'я", $(By.xpath("//input[@placeholder='']")).getText());
+//        logger.info("Строка 'Ім'я' відображається");
+        //Число місяь рік
+        //
+        }
 }

@@ -1,7 +1,7 @@
 package net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface;
 
 import com.codeborne.selenide.Selectors;
-import net.ukr.dev.BaseTests;
+import net.ukr.dev.BasesClassesForTests.BaseTests;
 import net.ukr.dev.TimeLimiteTest;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -123,5 +123,17 @@ public class VerifyNameElementsPageOfRegistrationEng extends BaseTests {
         //Кнопка реєстрації
         assertEquals("Create mailbox", $(".submit").getText());
         logger.info("Строка 'Create mailbox' відображається");
+    }
+    @Test //Перевірка тексту в полях для заповнення
+    public void test003_VerifySuffikxForElements() {
+
+        //текст в полі "Придумайте імя поштової скриньки"
+        assertEquals("@dev.ukr.net", $(".form__login-suffix").getText());
+        logger.info("Строка '@dev.ukr.net' відображається");
+        //Імя та призвище
+//        assertEquals("Ім'я", $(By.xpath("//input[@placeholder='']")).getText());
+//        logger.info("Строка 'Ім'я' відображається");
+        //Число місяь рік
+        //
     }
 }

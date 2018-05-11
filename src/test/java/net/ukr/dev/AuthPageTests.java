@@ -1,5 +1,6 @@
 package net.ukr.dev;
 
+import net.ukr.dev.BasesClassesForTests.BaseTests;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
@@ -29,7 +30,7 @@ public class AuthPageTests extends BaseTests {
     public void test002_checkLoginForPointSt() throws InterruptedException {
         $(By.cssSelector("#id-login")).clear();
         $(By.cssSelector("#id-login")).sendKeys(".test2.1_0105_001");
-        Thread.sleep(2000);
+        Thread.sleep(100);
         assertEquals("Символ . (крапка) не може використовуватися на початку і(або) в кінці", $(".input-default__error.is-size-normal").getText());
         logger.info("Повідомлення про використання крапки на початку логіна відповідає вимогам...");
     }
@@ -38,7 +39,7 @@ public class AuthPageTests extends BaseTests {
     public void test003_checkLoginForPointEn() throws InterruptedException {
         $(By.cssSelector("#id-login")).clear();
         $(By.cssSelector("#id-login")).sendKeys("test2.1_0105_001.");
-        Thread.sleep(2000);
+        Thread.sleep(100);
         assertEquals("Символ . (крапка) не може використовуватися на початку і(або) в кінці", $(".input-default__error.is-size-normal").getText());
         logger.info("Повідомлення про використання крапки вкінці логіна відповідає вимогам...");
     }
@@ -47,7 +48,7 @@ public class AuthPageTests extends BaseTests {
     public void test004_checkLoginForPointDo() throws InterruptedException {
         $(By.cssSelector("#id-login")).clear();
         $(By.cssSelector("#id-login")).sendKeys("test2..1_0105_001");
-        Thread.sleep(2000);
+        Thread.sleep(100);
         assertEquals("Багаторазове використання символу . (крапка) неможливе", $(".input-default__error.is-size-normal").getText());
         logger.info("Повідомлення про використання крапки вкінці логіна відповідає вимогам...");
     }
@@ -56,7 +57,7 @@ public class AuthPageTests extends BaseTests {
     public void test005_clearLoginField() throws InterruptedException {
         $(By.cssSelector("#id-login")).clear();
         $(By.cssSelector(".verifier__send.is-disabled")).click();
-        Thread.sleep(2000);
+        Thread.sleep(100);
         assertEquals("Поле має бути заповнене", $(".input-default__error.is-size-normal").getText());
         logger.info("Повідомлення про незаповнен поле логіну відповідає логіна відповідає вимогам...");
     }
@@ -64,7 +65,7 @@ public class AuthPageTests extends BaseTests {
     @Test
     public void test006_duplicateMail() throws InterruptedException {
         $(By.cssSelector("#id-login")).clear();
-        Thread.sleep(2000);
+        Thread.sleep(100);
         $(By.cssSelector("#id-login")).sendKeys("test2.1_3004_001");
         assertEquals("На жаль, скринька з таким іменем вже зайнята", $(".login-suggestions__error").getText());
         logger.info("Повідомлення про зайняте ім'я логіна відповідає вимогам...");
@@ -73,7 +74,7 @@ public class AuthPageTests extends BaseTests {
     @Test
     public void test007_cirilicSymbol() throws InterruptedException {
         $(By.cssSelector("#id-login")).clear();
-        Thread.sleep(2000);
+        Thread.sleep(100);
         $(By.cssSelector("#id-login")).sendKeys("testс2.1_3004_001");
         assertEquals("Ім'я поштової скриньки не може містити символи КИРИЛИЦІ", $(".input-default__error.is-size-normal").getText());
         logger.info("Повідомлення про кириличний символ в імені логіна відповідає вимогам...");
@@ -82,7 +83,7 @@ public class AuthPageTests extends BaseTests {
     @Test
     public void test008_symbolNotValid() throws InterruptedException {
         $(By.cssSelector("#id-login")).clear();
-        Thread.sleep(2000);
+        Thread.sleep(100);
         $(By.cssSelector("#id-login")).sendKeys("test2.1_3004_001`");
         assertEquals("Ім'я поштової скриньки може містити тільки символи _-. (підкреслення, дефіс, крапка)", $(".input-default__error.is-size-normal").getText());
         logger.info("Повідомлення про кириличний символ в імені логіна відповідає вимогам...");
