@@ -10,19 +10,20 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 /**
  * **********************************************************************
  * @Project Name : AuthTestAutomation  - Selenium Framework.
- * @TestSet Name : VerifyNameElementsPageOfRegistrationUkr
+ * @TestSet Name : TestVerifyNameElementsPageOfRegistrationUkr
  * @Description : Verify Name Elements on Page Of Registration for Ukr localization
- * @TestHeader : VerifyNameElementsPageOfRegistrationUkr
+ * @TestHeader : TestVerifyNameElementsPageOfRegistrationUkr
  * @Date : 10-May-2018
  * @Author :  Sergii Kuliesh
  * **********************************************************************
  */
 
-public class VerifyNameElementsPageOfRegistrationUkr extends BaseTests {
+public class TestVerifyNameElementsPageOfRegistrationUkr extends BaseTests {
 
     final static Logger logger = Logger.getLogger(TimeLimiteTest.class);
 
@@ -46,6 +47,7 @@ public class VerifyNameElementsPageOfRegistrationUkr extends BaseTests {
         assertEquals("Русский", $(By.xpath("//button[2]")).getText());
         logger.info("Строка 'Русский' відображається");
         assertEquals("English", $(By.xpath("//button[3]")).getText());
+        assertTrue($(By.xpath("//button[3]")).isDisplayed());
         logger.info("Строка 'English' відображається");
 
         //Первіряємо чи відображаються всі загальні тексти

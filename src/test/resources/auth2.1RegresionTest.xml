@@ -5,10 +5,10 @@
     <test name="auth2.1_Chrome66WIN10">
         <parameter name="browser" value="Chrome66Win10"/>
         <classes>
-    <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.VerifyNameElementsPageOfRegistrationUkr"/>
-    <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.VerifyNameElementsPageOfRegistrationRu"/>
-    <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.VerifyNameElementsPageOfRegistrationEng"/>
-    <class name="net.ukr.dev.AuthPageTests"/>
+    <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationUkr"/>
+    <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationRu"/>
+    <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationEng"/>
+    <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginUkr"/>
 </classes>
 </test>
 </suite>

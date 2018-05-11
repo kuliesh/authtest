@@ -1,4 +1,4 @@
-package net.ukr.dev;
+package net.ukr.dev.TestingErrorForInputValues;
 
 import net.ukr.dev.BasesClassesForTests.BaseTests;
 import org.apache.log4j.Logger;
@@ -10,8 +10,8 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class AuthPageTests extends BaseTests {
-    final static Logger logger = Logger.getLogger(AuthPageTests.class);
+public class TestErrorsWhenInputValuesToLoginUkr extends BaseTests {
+    final static Logger logger = Logger.getLogger(TestErrorsWhenInputValuesToLoginUkr.class);
 
     @BeforeClass
     public void openPage() throws InterruptedException {
@@ -96,12 +96,8 @@ public class AuthPageTests extends BaseTests {
 //        assertEquals("test2.1_0105_001-acdfghnrmemsm13", $("#id-login").getText());
 //        logger.info("Можна ввести лише 32 символи");
 //    }
-//Блок на помилки в полі "Придумайте пароль"
-    @Test
-    public void test_011_clearFieldPassword() throws InterruptedException {
-        $(By.cssSelector("#id-login")).clear();
-        $(By.cssSelector(".verifier__send")).click();
+
+//@AfterTest
     }
 
-    //@AfterTest
-}
+

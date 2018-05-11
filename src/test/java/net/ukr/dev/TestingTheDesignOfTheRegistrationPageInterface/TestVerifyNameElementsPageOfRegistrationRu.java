@@ -15,15 +15,15 @@ import static org.testng.AssertJUnit.assertEquals;
 /**
  * **********************************************************************
  * @Project Name : AuthTestAutomation  - Selenium Framework.
- * @TestSet Name : VerifyNameElementsPageOfRegistrationRu
+ * @TestSet Name : TestVerifyNameElementsPageOfRegistrationRu
  * @Description : Verify Name Elements on Page Of Registration for Ru localization
- * @TestHeader : VerifyNameElementsPageOfRegistrationRu
+ * @TestHeader : TestVerifyNameElementsPageOfRegistrationRu
  * @Date : 10-May-2018
  * @Author :  Sergii Kuliesh
  * **********************************************************************
  */
 
-public class VerifyNameElementsPageOfRegistrationRu extends BaseTests {
+public class TestVerifyNameElementsPageOfRegistrationRu extends BaseTests {
 
     final static Logger logger = Logger.getLogger(TimeLimiteTest.class);
 
