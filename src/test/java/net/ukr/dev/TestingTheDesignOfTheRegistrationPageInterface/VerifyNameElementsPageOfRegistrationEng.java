@@ -1,5 +1,6 @@
-package net.ukr.dev.TestingTheDesignOfThePageInterface;
+package net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface;
 
+import com.codeborne.selenide.Selectors;
 import net.ukr.dev.BaseTests;
 import net.ukr.dev.TimeLimiteTest;
 import org.apache.log4j.Logger;
@@ -14,15 +15,15 @@ import static org.testng.AssertJUnit.assertEquals;
 /**
  * **********************************************************************
  * @Project Name : AuthTestAutomation  - Selenium Framework.
- * @TestSet Name : VerifiedNameElementsPageOfRegistrationUkr
- * @Description : Verified Name Elements on Page Of Registration for Ukr localization
- * @TestHeader : VerifiedNameElementsPageOfRegistrationUkr
+ * @TestSet Name : VerifyNameElementsPageOfRegistrationEng
+ * @Description : Verify Name Elements on Page Of Registration for Eng localization
+ * @TestHeader : VerifyNameElementsPageOfRegistrationEng
  * @Date : 10-May-2018
  * @Author :  Sergii Kuliesh
  * **********************************************************************
  */
 
-public class VerifiedNameElementsPageOfRegistrationUkr extends BaseTests {
+public class VerifyNameElementsPageOfRegistrationEng extends BaseTests {
 
     final static Logger logger = Logger.getLogger(TimeLimiteTest.class);
 
@@ -32,13 +33,14 @@ public class VerifiedNameElementsPageOfRegistrationUkr extends BaseTests {
         open("http://newfront.dev.ukr.net/desktop/login"); //відкриваємо сторінку входу до поштової скриньки
         $(By.linkText("Створити скриньку")).click(); //переходимо на сторінку реєстрації поштової скриньки
         Thread.sleep(2000);
-        //Перевірка, що локалізація вибрана як "Українська"
-        assertEquals("Українська",$("button[class='header__lang-item is-current'] > span[class='header__lang-long-name']").getText());
+        //Перевірка, що локалізація вибрана як "English"
+        $(new Selectors.ByText("English")).click();
+        assertEquals("English",$("button[class='header__lang-item is-current'] > span[class='header__lang-long-name']").getText());
         logger.info("Вибрана Українська мова.");
     }
 
     @Test
-    public void test001_VerifiedTextWithoutElements(){
+    public void test001_VerifyextWithoutElements(){
 
         //Первіряємо чи відображаються всі мови для вибору
         assertEquals("Українська", $(By.xpath("//button[1]")).getText());
@@ -49,16 +51,16 @@ public class VerifiedNameElementsPageOfRegistrationUkr extends BaseTests {
         logger.info("Строка 'English' відображається");
 
         //Первіряємо чи відображаються всі загальні тексти
-        assertEquals("Реєстрація поштової скриньки", $(".header__title").getText());
-        logger.info("Строка 'Реєстрація поштової скриньки' відображається");
-        assertEquals("Створивши скриньку, ви зможете перенести в неї свою пошту з інших поштових сервісів.", $(".import-info__content").getText());
-        logger.info("Строка 'Створивши скриньку, ви зможете перенести в неї свою пошту з інших поштових сервісів.' відображається");
-//        assertEquals("*Усі поля повинні містити коректні дані", $(".annotation").getText());
-//        logger.info("Строка '*Усі поля повинні містити коректні дані' відображається");
-        assertEquals("Натискаючи на кнопку «Зареєструвати скриньку», я приймаю умови Угоди про використання електронної пошти FREEMAIL (mail.ukr.net).", $(".confirm-terms").getText());
-        logger.info("Строка 'Натискаючи на кнопку «Зареєструвати скриньку», я приймаю умови Угоди про використання електронної пошти FREEMAIL (mail.ukr.net).");
-        assertEquals("ЦІЛОДОБОВА ПІДТРИМКА", $(".footer__support-title").getText());
-        logger.info("Строка 'ЦІЛОДОБОВА ПІДТРИМКА' відображається");
+        assertEquals("Create Your @UKR.NET Mailbox", $(".header__title").getText());
+        logger.info("Строка 'Create Your @UKR.NET Mailbox' відображається");
+        assertEquals("Having created a mailbox, you can import your email from other email providers into it.", $(".import-info__content").getText());
+        logger.info("Строка 'Having created a mailbox, you can import your email from other email providers into it.' відображається");
+//        assertEquals("*Please, ensure that all fields are completed correctly", $(".annotation").getText());
+//        logger.info("Строка '*Please, ensure that all fields are completed correctly' відображається");
+        assertEquals("By clicking on \"Create mailbox\" button, I agree to the FREEMAIL (mail.ukr.net) Terms of Service.", $(".confirm-terms").getText());
+        logger.info("Строка 'By clicking on \"Create mailbox\" button, I agree to the FREEMAIL (mail.ukr.net) Terms of Service.");
+        assertEquals("24/7 SUPPORT SERVICE", $(".footer__support-title").getText());
+        logger.info("Строка '24/7 SUPPORT SERVICE' відображається");
 
         assertEquals("support@ukr.net", $(By.xpath("//li[1]/a")).getText());
         logger.info("Строка 'support@ukr.net' відображається");
@@ -71,46 +73,46 @@ public class VerifiedNameElementsPageOfRegistrationUkr extends BaseTests {
     }
 
     @Test
-    public void test002_VerifiedTextForElements(){
+    public void test002_VerifyTextForElements(){
         //Перевіряємо тексти для полей вводу
         //Поле логіну
-        assertEquals("Придумайте ім'я поштової скриньки", $(By.xpath("//section[1]/label")).getText());
-        logger.info("Строка 'Придумайте ім'я поштової скриньки' відображається");
+        assertEquals("Think up your mailbox name", $(By.xpath("//section[1]/label")).getText());
+        logger.info("Строка 'Think up your mailbox name' відображається");
         //Поле пароля
-        assertEquals("Придумайте пароль", $(By.xpath("//section[2]/label[1]")).getText());
-        logger.info("Строка 'Придумайте пароль' відображається");
+        assertEquals("Create a password", $(By.xpath("//section[2]/label[1]")).getText());
+        logger.info("Строка 'Create a password' відображається");
         //Поле повтору пароля
-        assertEquals("Введіть пароль повторно", $(By.xpath("//section[2]/label[2]")).getText());
-        logger.info("Строка 'Введіть пароль повторно' відображається");
+        assertEquals("Confirm your password", $(By.xpath("//section[2]/label[2]")).getText());
+        logger.info("Строка 'Confirm your password' відображається");
         //Поле вводу імені і призвища
-        assertEquals("Як вас звати?", $(By.xpath("//section[3]/label[1]")).getText());
-        logger.info("Строка 'Як вас звати?' відображається");
+        assertEquals("Your name", $(By.xpath("//section[3]/label[1]")).getText());
+        logger.info("Строка 'Your name' відображається");
         //Дати народження
-        assertEquals("Дата народження", $(By.xpath("//section[3]/label[2]")).getText());
-        logger.info("Строка 'Дата народження' відображається");
+        assertEquals("Birthdate", $(By.xpath("//section[3]/label[2]")).getText());
+        logger.info("Строка 'Birthdate' відображається");
         //Чекбокс для "Чоловік"
-        assertEquals("Чоловік", $(By.xpath("//div/div[1]/label[2]")).getText());
-        logger.info("Строка 'Чоловік' відображається");
+        assertEquals("Male", $(By.xpath("//div/div[1]/label[2]")).getText());
+        logger.info("Строка 'Male' відображається");
         //Чекбокс для "Жінка"
-        assertEquals("Жінка", $(By.xpath("//div/div[2]/label[2]")).getText());
-        logger.info("Строка 'Жінка' відображається");
+        assertEquals("Female", $(By.xpath("//div/div[2]/label[2]")).getText());
+        logger.info("Строка 'Female' відображається");
         //Поле вводу імені відправника
-        assertEquals("Ім'я відправника", $(By.xpath("//section[4]/label")).getText());
-        logger.info("Строка 'Ім'я відправника' відображається");
+        assertEquals("Sender’s name", $(By.xpath("//section[4]/label")).getText());
+        logger.info("Строка 'Sender’s name' відображається");
         //Поле вводу резеврної адреси пошти
-        assertEquals("Резервний e-mail", $(By.xpath("//section[5]/label")).getText());
-        logger.info("Строка 'Резервний e-mail' відображається");
+        assertEquals("Optional recovery e-mail", $(By.xpath("//section[5]/label")).getText());
+        logger.info("Строка 'Optional recovery e-mail' відображається");
         //Поле вводу мобільного телефону
-        assertEquals("Мобільний телефон", $(By.xpath("//section[6]/label")).getText());
-        logger.info("Строка 'Мобільний телефон' відображається");
+        assertEquals("Mobile phone number", $(By.xpath("//section[6]/label")).getText());
+        logger.info("Строка 'Mobile phone number' відображається");
 
         //Поле з повідомлення для активації
-        assertEquals("Поштову скриньку необхідно активувати", $(By.xpath("//section[7]/button/b")).getText());
-        logger.info("Строка 'Поштову скриньку необхідно активувати' відображається");
+        assertEquals("You should activate your mailbox", $(By.xpath("//section[7]/button/b")).getText());
+        logger.info("Строка 'You should activate your mailbox' відображається");
 //        assertEquals("На вказаний номер мобільного телефону буде відправлено SMS з кодом активації", $(By.xpath("//section[7]/button/span[1]/text()")).getText());
 //        logger.info("Строка 'На вказаний номер мобільного телефону  буде відправлено SMS з кодом активації' відображається");
-        assertEquals("ОТРИМАТИ КОД", $(By.xpath("//section[7]/button/span[2]")).getText());
-        logger.info("Строка 'ОТРИМАТИ КОД' відображається");
+        assertEquals("GET THE VERIFICATION CODE", $(By.xpath("//section[7]/button/span[2]")).getText());
+        logger.info("Строка 'GET THE VERIFICATION CODE' відображається");
 
         //Чекбокс для імпорта
         assertEquals("Розпочати імпорт пошти з інших поштових сервісів", $(By.xpath("//label[2]/strong")).getText());

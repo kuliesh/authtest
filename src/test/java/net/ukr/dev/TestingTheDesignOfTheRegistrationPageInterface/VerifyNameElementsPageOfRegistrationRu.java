@@ -1,4 +1,4 @@
-package net.ukr.dev.TestingTheDesignOfThePageInterface;
+package net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface;
 
 import com.codeborne.selenide.Selectors;
 import net.ukr.dev.BaseTests;
@@ -15,15 +15,15 @@ import static org.testng.AssertJUnit.assertEquals;
 /**
  * **********************************************************************
  * @Project Name : AuthTestAutomation  - Selenium Framework.
- * @TestSet Name : VerifiedNameElementsPageOfRegistrationRu
- * @Description : Verified Name Elements on Page Of Registration for Ru localization
- * @TestHeader : VerifiedNameElementsPageOfRegistrationRu
+ * @TestSet Name : VerifyNameElementsPageOfRegistrationRu
+ * @Description : Verify Name Elements on Page Of Registration for Ru localization
+ * @TestHeader : VerifyNameElementsPageOfRegistrationRu
  * @Date : 10-May-2018
  * @Author :  Sergii Kuliesh
  * **********************************************************************
  */
 
-public class VerifiedNameElementsPageOfRegistrationRu extends BaseTests {
+public class VerifyNameElementsPageOfRegistrationRu extends BaseTests {
 
     final static Logger logger = Logger.getLogger(TimeLimiteTest.class);
 
