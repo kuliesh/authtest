@@ -115,13 +115,13 @@ public class VerifyNameElementsPageOfRegistrationEng extends BaseTests {
         logger.info("Строка 'GET THE VERIFICATION CODE' відображається");
 
         //Чекбокс для імпорта
-        assertEquals("Розпочати імпорт пошти з інших поштових сервісів", $(By.xpath("//label[2]/strong")).getText());
-        logger.info("Строка 'Розпочати імпорт пошти з інших поштових сервісів' відображається");
+        assertEquals("Start importing my mail from other email providers", $(By.xpath("//label[2]/strong")).getText());
+        logger.info("Строка 'Start importing my mail from other email providers' відображається");
         //Чекбокс для підтвердження ознайомлення з правилами
-        assertEquals("Я надаю згоду на обробку персональних даних відповідно до Угоди про конфіденційність і приймаю її умови.", $(By.xpath("//label[2]/span")).getText());
-        logger.info("Строка 'Я надаю згоду на обробку персональних даних відповідно до Угоди про конфіденційність і приймаю її умови.' відображається");
+        assertEquals("I herein consent to my personal data processing in accordance with Privacy Policy which I have read and agreed to.", $(By.xpath("//label[2]/span")).getText());
+        logger.info("Строка 'I herein consent to my personal data processing in accordance with Privacy Policy which I have read and agreed to.' відображається");
         //Кнопка реєстрації
-        assertEquals("Зареєструвати скриньку", $(".submit").getText());
-        logger.info("Строка 'Зареєструвати скриньку' відображається");
+        assertEquals("Create mailbox", $(".submit").getText());
+        logger.info("Строка 'Create mailbox' відображається");
     }
 }
