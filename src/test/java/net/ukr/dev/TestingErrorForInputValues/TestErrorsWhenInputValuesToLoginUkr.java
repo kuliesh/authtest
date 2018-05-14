@@ -50,7 +50,7 @@ public class TestErrorsWhenInputValuesToLoginUkr extends BaseTests {
         $(By.cssSelector("#id-login")).sendKeys("test2..1_0105_001");
         Thread.sleep(100);
         assertEquals("Багаторазове використання символу . (крапка) неможливе", $(".input-default__error.is-size-normal").getText());
-        logger.info("Повідомлення про використання крапки вкінці логіна відповідає вимогам...");
+        logger.info("Повідомлення про використання крапки багаторазову для логіна відповідає вимогам...");
     }
 
     @Test
@@ -59,7 +59,7 @@ public class TestErrorsWhenInputValuesToLoginUkr extends BaseTests {
         $(By.cssSelector(".verifier__send.is-disabled")).click();
         Thread.sleep(100);
         assertEquals("Поле має бути заповнене", $(".input-default__error.is-size-normal").getText());
-        logger.info("Повідомлення про незаповнен поле логіну відповідає логіна відповідає вимогам...");
+        logger.info("Повідомлення про незаповнене поле логіну відповідає логіна відповідає вимогам...");
     }
 
     @Test
