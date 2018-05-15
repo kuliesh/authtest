@@ -17,17 +17,19 @@ public class TestDisplayedElementsForWidgetUkr extends BaseTests {
     @BeforeClass
     public void openPage() throws InterruptedException {
         logger.info("Open page for testing widget");
-        open("http://morty.fwdcdn.com/widget/widget.html"); //відкриваємо сторінку входу до поштової скриньки
+        open("https://www.ukr.net/"); //відкриваємо сторінку входу до поштової скриньки
     }
 
     @Test
     public void Wg1_Title (){
-        assertEquals("Пошта", $((".form__mail-link")).getText());
-        logger.info("Заголово 'Пошта' відображається");
+        assertEquals("Пошта", $((".login-block__title")).getText());
+        logger.info("Заголовок 'Пошта' відображається");
     }
 
     @Test
-    public void Wg1_TitleClick (){}
+    public void Wg1_TitleClick (){
+
+    }
 
     @Test
     public void Wg2_FieldLogin (){
