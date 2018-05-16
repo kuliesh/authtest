@@ -1,5 +1,6 @@
 package net.ukr.dev;
 
+import com.codeborne.selenide.Condition;
 import net.ukr.dev.BasesClassesForTests.BaseTests;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -8,8 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.Random;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class createMail extends BaseTests {
     final static Logger logger = Logger.getLogger(net.ukr.dev.createMail.class);
@@ -45,13 +45,16 @@ public class createMail extends BaseTests {
             $(By.xpath("//section[1]/div[4]/div[2]/input")).click();
             $(By.xpath("//section[1]/div[4]/div[2]/input")).sendKeys("Привіт" + c+d);
 
-//            By iframeBodyMail = By.cssSelector("iframe#mce_0_ifr");
-//            switchTo().frame($(iframeBodyMail));
-//            $(By.cssSelector("#tinymce>div")).click();
-//            Thread.sleep(2000);
-//            //$(By.cssSelector("#tinymce>div")).sendKeys("Бармалей самий класний"+c);
-//            $(By.cssSelector("body#tinymce > div")).shouldBe(Condition.exist);//.sendKeys("Бармалей самий класний"+c);
-//            switchTo().defaultContent();
+            $("#mceu_33").click();
+            $("#mce_0_ifr").click();
+
+            By iframeBodyMail = By.cssSelector("iframe#mce_0_ifr");
+            switchTo().frame($(iframeBodyMail));
+            $(By.cssSelector("#tinymce>div")).click();
+            Thread.sleep(2000);
+            //$(By.cssSelector("#tinymce>div")).sendKeys("Бармалей самий класний"+c);
+            $(By.cssSelector("body#tinymce > div")).shouldBe(Condition.exist);//.sendKeys("Бармалей самий класний"+c);
+            switchTo().defaultContent();
 
             $(".default.send").click();
             i++;
