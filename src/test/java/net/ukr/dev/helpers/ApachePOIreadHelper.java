@@ -1,5 +1,6 @@
 package net.ukr.dev.helpers;
 
+import org.apache.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -12,7 +13,7 @@ public class ApachePOIreadHelper {
     private XSSFSheet excelWSheet;
     private XSSFWorkbook excelWBook;
     private XSSFCell cell;
-
+    final static Logger logger = Logger.getLogger(net.ukr.dev.helpers.ApachePOIreadHelper.class);
 
     // This method is to set the File path and to open the Excel file
     public void setExcelFile(String Path, String SheetName) {
@@ -21,7 +22,9 @@ public class ApachePOIreadHelper {
             FileInputStream ExcelFile = new FileInputStream(Path);
             // Access the required test data sheet
             excelWBook = new XSSFWorkbook(ExcelFile);
+
             excelWSheet = excelWBook.getSheet(SheetName);
+            logger.info("setExcelFile");
         } catch (Exception e) {
             System.out.println("Exception " + e.getMessage());
         }
@@ -42,7 +45,9 @@ public class ApachePOIreadHelper {
     private int getRowUsed(){
         return excelWSheet.getLastRowNum();
     }
+
     private String getCellData(int rowNum, int colNum) {
+        logger.info("rowNum = " + rowNum + ", colNum = " + colNum);
         cell = excelWSheet.getRow(rowNum).getCell(colNum);
         return cell.getStringCellValue();
     }
@@ -50,9 +55,10 @@ public class ApachePOIreadHelper {
     private List[] getRowData(int rowNo) {
         List[] arr = new List[1];
         List list = new ArrayList();
-        int startCol = 1;
+        int startCol = 0;
         int totalCols = excelWSheet.getRow(rowNo)
                 .getPhysicalNumberOfCells();
+        logger.info("total colon = " + totalCols);
         for (int i = startCol; i < totalCols; i++) {
             String cellData = getCellData(rowNo, i);
             list.add(cellData);
