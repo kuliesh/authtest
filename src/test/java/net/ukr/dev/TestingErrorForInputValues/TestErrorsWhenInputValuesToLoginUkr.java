@@ -16,7 +16,7 @@ public class TestErrorsWhenInputValuesToLoginUkr extends BaseTests {
     @BeforeClass
     public void openPage() throws InterruptedException {
         logger.info("Open page...");
-        open("http://accounts.dev.ukr.net/registration");
+        open("http://accounts.ukr.net/registration");
         Thread.sleep(2000);
     }
 //Блок на помилки в полі "Придумайте ім'я поштової скриньки"

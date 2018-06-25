@@ -26,7 +26,7 @@ public class LoginTest extends BaseTests {
     public Object[][] rightDataForLogin (Method method){
 
         ApachePOIreadHelper excelReader = new ApachePOIreadHelper();
-        File file = new File("D:/AutomationTest/authtest/data_file/login_data.xlsx");
+        File file = new File("//authtest/data_file/login_data.xlsx");
         excelReader.setExcelFile(String.valueOf(file), "LoginTest");
         List rowsNo = excelReader.getRowContains(method.getName(), 0 );
         return excelReader.getTableArray(rowsNo);
