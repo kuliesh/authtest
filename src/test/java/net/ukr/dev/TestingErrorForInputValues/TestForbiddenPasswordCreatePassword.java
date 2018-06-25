@@ -34,20 +34,20 @@ public class TestForbiddenPasswordCreatePassword extends BaseTests {
     //формування масиву даних з файла, що був оброблений дата провайдером
     public void forbiddenPassword(ArrayList data) throws InterruptedException {
         String testName = String.valueOf(data.get(0));
-        String errorPassword = String.valueOf(data.get(1));
-        String errorText = String.valueOf(data.get(2));
-        logger.info("errorPassword = " + errorPassword);
-        logger.info("errorText = " + errorText);
+        String inputPassword = String.valueOf(data.get(1));
+        String displayedError = String.valueOf(data.get(2));
         logger.info("testName = " + testName);
+        logger.info("inputPassword = " + inputPassword);
+        logger.info("displayedError = " + displayedError);
 
         open("http://accounts-new.dev.ukr.net/registration");
         Thread.sleep(2000);
 
         //Вже сам тест
-        $(By.cssSelector("#id-password")).sendKeys(errorPassword);
+        $(By.cssSelector("#id-password")).sendKeys(inputPassword);
         $(By.cssSelector("#id-password-repeat")).click();
-        $(By.cssSelector(".input-default__error.is-size-normal")).shouldHave(text(errorText));
-        assertFalse("No user found.",$(By.cssSelector(".input-default__error.is-size-normal")).getText().equals(errorText));
+        $(By.cssSelector(".input-default__error.is-size-normal")).shouldHave(text(displayedError));
+        assertFalse("No user found.",$(By.cssSelector(".input-default__error.is-size-normal")).getText().equals(displayedError));
         Thread.sleep(2000);
         refresh();
     }
