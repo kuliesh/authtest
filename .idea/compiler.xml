@@ -9,5 +9,8 @@
         <module name="authtest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="authtest" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
