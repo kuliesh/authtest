@@ -26,13 +26,16 @@ public class TestDisplayElements extends BaseTests {
         $(By.linkText("Створити скриньку")).click(); //переходимо на сторінку реєстрації поштової скриньки
     }
 
+
+
+
     public void isDispayedElements(){
         //logger.info("Відображення елементів на сторінці реєстрації при виборі української локалізації");
         //assertTrue(($("#id-login")).isDisplayed());
         //assertTrue(loginInput.isDisplayed(), strLoginInputErr);
 
         /////////////////////////////////////
-        assertTrue(($("#id-logi")).isDisplayed(),"Поле для вводу 'Придумайте ім'я поштової скриньки' не відображається");
+        assertTrue(($("#id-login")).isDisplayed(),"Поле для вводу 'Придумайте ім'я поштової скриньки' не відображається");
         logger.info("Поле для вводу 'Придумайте ім'я поштової скриньки' відображається");
         assertTrue(($("#id-password")).isDisplayed());
         logger.info("Поле для вводу 'Придумайте пароль' відображається");

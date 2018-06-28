@@ -3,15 +3,43 @@
 
 <suite name="RegressionTests" thread-count="5">
     <test name="auth2.1_Chrome66WIN10">
-        <parameter name="browser" value="Chrome66Win10"/>
+        <parameter name="browser" value="firefox"/>
         <classes>
    <!-- <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationUkr"/>
     <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationRu"/>
     <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationEng"/>
     <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestDisplayElements"/>
     <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginUkr"/>
-    <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginRu"/>
-    <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginEn"/>-->
+    <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginRu"/>-->
+    <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginEn"/>
+
+            <!--<class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestDisplayElements"/>-->
+        </classes>
+    </test>
+    <test name="auth2.1_Chrome66WIN10_dis_chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <!-- <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationUkr"/>
+             <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationRu"/>
+             <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationEng"/>
+             <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestDisplayElements"/>
+             <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginUkr"/>
+             <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginRu"/>
+             <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginEn"/>-->
+
+            <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestDisplayElements"/>
+        </classes>
+    </test>
+    <test name="auth2.1_Chrome66WIN10_dis_firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <!-- <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationUkr"/>
+             <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationRu"/>
+             <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestVerifyNameElementsPageOfRegistrationEng"/>
+             <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestDisplayElements"/>
+             <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginUkr"/>
+             <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginRu"/>
+             <class name="net.ukr.dev.TestingErrorForInputValues.TestErrorsWhenInputValuesToLoginEn"/>-->
 
             <class name="net.ukr.dev.TestingTheDesignOfTheRegistrationPageInterface.TestDisplayElements"/>
         </classes>
