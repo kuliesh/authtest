@@ -2,3 +2,4 @@
 authtest.iml
 logs/
 target/
+test-output/
