@@ -14,7 +14,8 @@ import java.util.List;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
-import static org.junit.Assert.assertFalse;
+import static org.testng.AssertJUnit.assertFalse;
+
 
 @Test
 public class TestForbiddenPasswordCreatePassword extends BaseTests {

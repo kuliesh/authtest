@@ -15,7 +15,7 @@ import java.util.List;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static org.junit.Assert.assertFalse;
+import static org.testng.AssertJUnit.assertFalse;
 
 @Test
 public class LoginTest extends BaseTests {
