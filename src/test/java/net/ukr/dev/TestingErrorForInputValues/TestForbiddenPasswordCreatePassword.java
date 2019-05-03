@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static org.testng.AssertJUnit.assertFalse;
 
-
+@Test
 public class TestForbiddenPasswordCreatePassword extends BaseTests {
     final static Logger logger = Logger.getLogger(net.ukr.dev.TestingErrorForInputValues.TestForbiddenPasswordCreatePassword.class);
 
@@ -41,7 +41,7 @@ public class TestForbiddenPasswordCreatePassword extends BaseTests {
         logger.info("inputPassword = " + inputPassword);
         logger.info("displayedError = " + displayedError);
 
-        open("https://accounts-gamma.dev.ukr.net/registration");
+        open("https://accounts.ukr.net/registration");
         Thread.sleep(2000);
 
         //Вже сам тест
