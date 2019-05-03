@@ -17,7 +17,6 @@ import static com.codeborne.selenide.Selenide.*;
 import static org.testng.AssertJUnit.assertFalse;
 
 
-@Test
 public class TestForbiddenPasswordCreatePassword extends BaseTests {
     final static Logger logger = Logger.getLogger(net.ukr.dev.TestingErrorForInputValues.TestForbiddenPasswordCreatePassword.class);
 
@@ -26,7 +25,7 @@ public class TestForbiddenPasswordCreatePassword extends BaseTests {
     public Object[][] errorDataForPasswordUa (Method method){
 
         ApachePOIreadHelper excelReader = new ApachePOIreadHelper();
-        File file = new File("~/IdeaProjects/authtest/data_file/forbidden_password.xlsx");
+        File file = new File("D://AutomationTest/authtest/data_file/forbidden_password.xlsx");
         excelReader.setExcelFile(String.valueOf(file), "ForbiddenTest");
         List rowsNo = excelReader.getRowContains(method.getName(), 0 );
         return excelReader.getTableArray(rowsNo);
@@ -42,7 +41,7 @@ public class TestForbiddenPasswordCreatePassword extends BaseTests {
         logger.info("inputPassword = " + inputPassword);
         logger.info("displayedError = " + displayedError);
 
-        open("https://accounts.ukr.net/registration");
+        open("https://accounts-gamma.dev.ukr.net/registration");
         Thread.sleep(2000);
 
         //Вже сам тест
